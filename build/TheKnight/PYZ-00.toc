@@ -612,31 +612,19 @@
    'c:\\program '
    'files\\python39\\lib\\site-packages\\pkg_resources\\__init__.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.packaging._structures',
+  ('pkg_resources._vendor',
    'c:\\program '
-   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
+   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.packaging.utils',
+  ('pkg_resources._vendor.six',
    'c:\\program '
-   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
+   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\six.py',
    'PYMODULE'),
   ('pkg_resources._vendor.pyparsing',
    'c:\\program '
    'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing.py',
    'PYMODULE'),
   ('uuid', 'c:\\program files\\python39\\lib\\uuid.py', 'PYMODULE'),
-  ('pkg_resources._vendor.packaging.version',
-   'c:\\program '
-   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.requirements',
-   'c:\\program '
-   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor',
-   'c:\\program '
-   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
-   'PYMODULE'),
   ('pkg_resources._vendor.packaging.markers',
    'c:\\program '
    'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
@@ -644,6 +632,18 @@
   ('pkg_resources._vendor.packaging._compat',
    'c:\\program '
    'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._structures',
+   'c:\\program '
+   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging',
+   'c:\\program '
+   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.utils',
+   'c:\\program '
+   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
    'PYMODULE'),
   ('pkg_resources._vendor.appdirs',
    'c:\\program '
@@ -655,36 +655,36 @@
   ('win32com.shell',
    'C:\\Users\\liyulong\\AppData\\Roaming\\Python\\Python39\\site-packages\\win32comext\\shell\\__init__.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.six',
-   'c:\\program '
-   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\six.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging',
-   'c:\\program '
-   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
-   'PYMODULE'),
   ('pkg_resources._vendor.packaging.__about__',
    'c:\\program '
    'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.version',
+   'c:\\program '
+   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.specifiers',
+   'c:\\program '
+   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
    'PYMODULE'),
   ('pkg_resources._vendor.packaging.tags',
    'c:\\program '
    'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\tags.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.packaging.specifiers',
+  ('pkg_resources._vendor.packaging.requirements',
    'c:\\program '
-   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
+   'files\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
    'PYMODULE'),
   ('pkg_resources.extern',
    'c:\\program '
    'files\\python39\\lib\\site-packages\\pkg_resources\\extern\\__init__.py',
    'PYMODULE'),
   ('imp', 'c:\\program files\\python39\\lib\\imp.py', 'PYMODULE'),
-  ('_py_abc', 'c:\\program files\\python39\\lib\\_py_abc.py', 'PYMODULE'),
   ('stringprep', 'c:\\program files\\python39\\lib\\stringprep.py', 'PYMODULE'),
   ('tracemalloc',
    'c:\\program files\\python39\\lib\\tracemalloc.py',
    'PYMODULE'),
+  ('_py_abc', 'c:\\program files\\python39\\lib\\_py_abc.py', 'PYMODULE'),
   ('tools',
    'F:\\studyFile\\DigitalGameDesign\\TheKnight_pygame\\tools.py',
    'PYMODULE'),
