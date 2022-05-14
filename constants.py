@@ -16,7 +16,7 @@ __author__ = 'Geoff Yulong Li'
 
 
 # FPS
-FPS = 120
+FPS = 60
 # caption
 TITLE = 'The Knight'
 # screen size
