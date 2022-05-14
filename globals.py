@@ -45,8 +45,8 @@ class Global:
         display.init()
         self.full_display_w = display.Info().current_w
         self.full_display_h = display.Info().current_h
-        self.display_width = display.Info().current_w
-        self.display_height = display.Info().current_h
+        self.display_width = self.full_display_w
+        self.display_height = self.full_display_h
         self.display = display.set_mode(
             (self.display_width, self.display_height))
 

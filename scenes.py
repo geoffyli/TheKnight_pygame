@@ -389,6 +389,7 @@ class BattleScene(Scene):
         if self.next_scene is not None and self.next_scene[0] == 'scene_selection_menu':
             # Draw screen black.
             pg.draw.rect(self.screen, c.BLACK, self.screen.get_rect())
+        print(self.clock.get_fps())
 
     def scale_screen(self):
         """Scale the scene surface to the game window size."""
@@ -410,21 +411,22 @@ class BattleScene(Scene):
 
     def update_particles(self):
         """Update particles in the scene."""
-        for sprite in self.particles:
-            sprite.update()
-            if sprite.timer < 0:
-                self.particles.remove(sprite)
+        if len(self.particles) != 0:
+            for sprite in self.particles:
+                sprite.update()
+                if sprite.timer < 0:
+                    self.particles.remove(sprite)
 
     def update_tips(self):
         """Update the tips text in the scene."""
-        for text in self.tips_text_group:
-            if self.activate_tips_text == True:
+        if self.activate_tips_text == True:
+            for text in self.tips_text_group:
                 text.update()
 
     def update_exit_text(self):
         """Update the exit text in the scene."""
-        for text in self.exit_text_group:
-            if self.activate_exit_text == True:
+        if self.activate_exit_text == True:
+            for text in self.exit_text_group:
                 text.update()
 
     def update_player_info(self):
@@ -475,19 +477,15 @@ class Cliff(BattleScene):
                              self.map.height * self.size_multiplier)
         # Append background images.
         self.backgrounds.append(Background(
-            self.screen, self.camera, CLIFFCLOUDS, 0.1, (-0.1, 0.1), (0.6, 1)))
+            self.screen, self.camera, CLIFFCLOUDS, 0.1, (-0.1, 0.1), (0.8, 1)))
         self.backgrounds.append(Background(
-            self.screen, self.camera, CLIFFCLOUDS, 0.1, (0.5, 0.1), (0.6, 1)))
-        self.backgrounds.append(Background(
-            self.screen, self.camera, CLIFFCLOUDS, 0.1, (1.1, 0.1), (0.6, 1)))
+            self.screen, self.camera, CLIFFCLOUDS, 0.1, (0.7, 0.1), (0.8, 1)))
         self.backgrounds.append(Background(
             self.screen, self.camera, CLIFFSEA, 0.25, (-0.1, 0.8), (1.2, 0.5)))
         self.backgrounds.append(Background(
             self.screen, self.camera, CLIFFSEA, 0.25, (1.1, 0.8), (1.2, 0.5)))
         self.backgrounds.append(Background(
-            self.screen, self.camera, CLIFFGROUND, 0.5, (-0.1, 0.9), (1.2, 0.5)))
-        self.backgrounds.append(Background(
-            self.screen, self.camera, CLIFFGROUND, 0.5, (0.7, 0.9), (1.2, 0.5)))
+            self.screen, self.camera, CLIFFGROUND, 0.5, (1, 1.1), (1.2, 0.5)))
 
     def new_objs_from_map(self):
         for tile_object in self.map.tmxdata.objects:
@@ -613,19 +611,15 @@ class StringStar(BattleScene):
                              self.map.height * self.size_multiplier)
         # Append background images.
         self.backgrounds.append(Background(
-            self.screen, self.camera, STRINGSTARBLUECLOUD, 0.25, (-0.1, -0.65), (1.2, 1.8)))
+            self.screen, self.camera, STRINGSTARBLUECLOUD, 0.15, (-0.1, -0.6), (1.2, 1.8), True))
         self.backgrounds.append(Background(
-            self.screen, self.camera, STRINGSTARBLUECLOUD, 0.25, (1.1, -0.65), (1.2, 1.8)))
+            self.screen, self.camera, STRINGSTARBLUECLOUD, 0.15, (1.1, -0.6), (1.2, 1.8), True))
         self.backgrounds.append(Background(
-            self.screen, self.camera, STRINGSTARBLUECLOUD, 0.25, (2.3, -0.65), (1.2, 1.8)))
+            self.screen, self.camera, STRINGSTARPURPLECLOUD, 0.3, (-0.1, -0.5), (1.2, 1.8, True)))
         self.backgrounds.append(Background(
-            self.screen, self.camera, STRINGSTARPURPLECLOUD, 0.5, (-0.1, -0.5), (1.2, 1.8)))
+            self.screen, self.camera, STRINGSTARPURPLECLOUD, 0.3, (1.1, -0.5), (1.2, 1.8, True)))
         self.backgrounds.append(Background(
-            self.screen, self.camera, STRINGSTARPURPLECLOUD, 0.5, (1.1, -0.5), (1.2, 1.8)))
-        self.backgrounds.append(Background(
-            self.screen, self.camera, STRINGSTARPURPLECLOUD, 0.5, (2.3, -0.5), (1.2, 1.8)))
-        self.backgrounds.append(Background(
-            self.screen, self.camera, STRINGSTARPURPLECLOUD, 0.5, (3.5, -0.5), (1.2, 1.8)))
+            self.screen, self.camera, STRINGSTARPURPLECLOUD, 0.3, (2.3, -0.5), (1.2, 1.8, True)))
 
     def new_objs_from_map(self):
         # Create sprites.
@@ -772,15 +766,11 @@ class InfiniteModeCliff(BattleScene):
                              self.map.height * self.size_multiplier)
         # Append background images.
         self.backgrounds.append(Background(
-            self.screen, self.camera, CLIFFCLOUDS, 0.1, (-0.1, 0.1), (0.6, 1)))
+            self.screen, self.camera, CLIFFCLOUDS, 0.1, (-0.1, 0.1), (1.2, 1)))
         self.backgrounds.append(Background(
-            self.screen, self.camera, CLIFFCLOUDS, 0.1, (0.5, 0.1), (0.6, 1)))
+            self.screen, self.camera, CLIFFCLOUDS, 0.1, (1.1, 0.1), (1.2, 1)))
         self.backgrounds.append(Background(
-            self.screen, self.camera, CLIFFCLOUDS, 0.1, (1.1, 0.1), (0.6, 1)))
-        self.backgrounds.append(Background(
-            self.screen, self.camera, CLIFFSEA, 0.25, (-0.1, 0.8), (1.2, 0.5)))
-        self.backgrounds.append(Background(
-            self.screen, self.camera, CLIFFSEA, 0.25, (1.1, 0.8), (1.2, 0.5)))
+            self.screen, self.camera, CLIFFSEA, 0.25, (-0.1, 0.8), (2.4, 0.5)))
         self.backgrounds.append(Background(
             self.screen, self.camera, CLIFFGROUND, 0.5, (0.2, 1.1), (1.2, 0.5)))
 
