@@ -37,9 +37,9 @@ class Control:
         self.global_init()
         self.pygame_init()
 
-        # loading_menu = LoadingMenu(
-        #     self.clock, self.screen, self.display, self.glo)
-        # loading_menu.main()
+        loading_menu = LoadingMenu(
+            self.clock, self.screen, self.display, self.glo)
+        loading_menu.main()
         self.glo.next_scene = ['main_menu', 'press_key']
         while True:
             if self.glo.next_scene[0] == 'main_menu':
